@@ -1,0 +1,1 @@
+﻿Files exported from Open Metadata Registry. Used for general maintenance in metadataregistry.org.
