@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://comicmeta.org/cbo" attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:cbo="http://comicmeta.org/cbo"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+  <!--
+    NAME          : Comic Book Schema (Core)
+    DESCRIPTION   : A minimal XML schema for implementing core terms from the Comic Book Ontology metadata vocabulary.
+  -->
+
+  <!-- // WRAPPER -->
+  <xs:element name="Collection" type="cbo:Collection"></xs:element>
+
+  <!-- // ELEMENTS //      -->
+  <xs:element name="Comic" type="cbo:Comic"></xs:element>
+  <xs:element name="Collector" type="cbo:Collector"></xs:element>
+
+  <!-- // PROPERTIES //   -->
+  <xs:element name="certNumber" type="xs:string"></xs:element>
+  <xs:element name="country" type="xs:string"></xs:element>
+  <xs:element name="imprintName" type="xs:string"></xs:element>
+  <xs:element name="issueNumber" type="xs:string"></xs:element>
+  <xs:element name="language" type="xs:string"></xs:element>
+  <xs:element name="printing" type="xs:int"></xs:element>
+  <xs:element name="publisherName" type="xs:string"></xs:element>
+  <xs:element name="seriesTitle" type="xs:string"></xs:element>
+  <xs:element name="seriesYear" type="xs:gYear"></xs:element>
+  <xs:element name="variance" type="xs:string"></xs:element>
+  <xs:element name="volumeNumber" type="xs:string"></xs:element>
+
+  <!-- // CLASSES //   -->
+  <xs:complexType name="Collection">
+    <xs:sequence>
+      <xs:element ref="cbo:Collector" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element ref="cbo:Comic" minOccurs="0" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Collector">
+    <xs:attribute name="name" type="xs:string"></xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="Comic">
+    <xs:sequence>
+      <xs:element ref="cbo:publisherName" minOccurs="1" maxOccurs="1"></xs:element>
+      <xs:element ref="cbo:imprintName" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element ref="cbo:country" minOccurs="1" maxOccurs="1"></xs:element>
+      <xs:element ref="cbo:seriesTitle" minOccurs="1" maxOccurs="1"></xs:element>
+      <xs:element ref="cbo:seriesYear" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element ref="cbo:volumeNumber" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element ref="cbo:issueNumber" minOccurs="1" maxOccurs="1"></xs:element>
+      <xs:element ref="cbo:language" minOccurs="1" maxOccurs="1"></xs:element>
+      <xs:element name="format" type="cbo:Format" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element name="edition" type="cbo:Edition" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element ref="cbo:printing" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element ref="cbo:variance" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element name="condition" type="cbo:Condition" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element name="grade" type="cbo:Grade" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element ref="cbo:certNumber" minOccurs="0" maxOccurs="1"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="Condition">
+    <xs:restriction base="cbo:Conditions"></xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Edition">
+    <xs:restriction base="cbo:Editions"></xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Format">
+    <xs:restriction base="cbo:Formats"></xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Grade">
+    <xs:restriction base="cbo:Grades"></xs:restriction>
+  </xs:simpleType>
+
+  <!-- // INDIVIDUALS //   -->
+  <xs:simpleType name="Conditions">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GM"></xs:enumeration>
+      <xs:enumeration value="MT"></xs:enumeration>
+      <xs:enumeration value="MT-"></xs:enumeration>
+      <xs:enumeration value="NM+"></xs:enumeration>
+      <xs:enumeration value="NM"></xs:enumeration>
+      <xs:enumeration value="NM-"></xs:enumeration>
+      <xs:enumeration value="VF/NM"></xs:enumeration>
+      <xs:enumeration value="VF+"></xs:enumeration>
+      <xs:enumeration value="VF"></xs:enumeration>
+      <xs:enumeration value="VF-"></xs:enumeration>
+      <xs:enumeration value="FN/VF"></xs:enumeration>
+      <xs:enumeration value="FN+"></xs:enumeration>
+      <xs:enumeration value="FN"></xs:enumeration>
+      <xs:enumeration value="FN-"></xs:enumeration>
+      <xs:enumeration value="VG/FN"></xs:enumeration>
+      <xs:enumeration value="VG+"></xs:enumeration>
+      <xs:enumeration value="VG"></xs:enumeration>
+      <xs:enumeration value="VG-"></xs:enumeration>
+      <xs:enumeration value="GD/VG"></xs:enumeration>
+      <xs:enumeration value="GD+"></xs:enumeration>
+      <xs:enumeration value="GD"></xs:enumeration>
+      <xs:enumeration value="GD-"></xs:enumeration>
+      <xs:enumeration value="FR/GD"></xs:enumeration>
+      <xs:enumeration value="FR"></xs:enumeration>
+      <xs:enumeration value="PR"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Editions">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Direct"></xs:enumeration>
+      <xs:enumeration value="Limited"></xs:enumeration>
+      <xs:enumeration value="Newsstand"></xs:enumeration>
+      <xs:enumeration value="Subscription"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Formats">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AshCan"></xs:enumeration>
+      <xs:enumeration value="BlackAndWhite"></xs:enumeration>
+      <xs:enumeration value="Color"></xs:enumeration>
+      <xs:enumeration value="ComicBook"></xs:enumeration>
+      <xs:enumeration value="DigitalComic"></xs:enumeration>
+      <xs:enumeration value="Fanzine"></xs:enumeration>
+      <xs:enumeration value="Fumetti"></xs:enumeration>
+      <xs:enumeration value="GraphicNovel"></xs:enumeration>
+      <xs:enumeration value="MassMarketPaperback"></xs:enumeration>
+      <xs:enumeration value="Omnibus"></xs:enumeration>
+      <xs:enumeration value="Preview"></xs:enumeration>
+      <xs:enumeration value="Promotional"></xs:enumeration>
+      <xs:enumeration value="TradePaperback"></xs:enumeration>
+      <xs:enumeration value="WebComic"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Grades">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="10.0"></xs:enumeration>
+      <xs:enumeration value="9.9"></xs:enumeration>
+      <xs:enumeration value="9.8"></xs:enumeration>
+      <xs:enumeration value="9.6"></xs:enumeration>
+      <xs:enumeration value="9.4"></xs:enumeration>
+      <xs:enumeration value="9.2"></xs:enumeration>
+      <xs:enumeration value="9.0"></xs:enumeration>
+      <xs:enumeration value="8.5"></xs:enumeration>
+      <xs:enumeration value="8.0"></xs:enumeration>
+      <xs:enumeration value="7.5"></xs:enumeration>
+      <xs:enumeration value="7.0"></xs:enumeration>
+      <xs:enumeration value="6.5"></xs:enumeration>
+      <xs:enumeration value="6.0"></xs:enumeration>
+      <xs:enumeration value="5.5"></xs:enumeration>
+      <xs:enumeration value="5.0"></xs:enumeration>
+      <xs:enumeration value="4.5"></xs:enumeration>
+      <xs:enumeration value="4.0"></xs:enumeration>
+      <xs:enumeration value="3.5"></xs:enumeration>
+      <xs:enumeration value="3.0"></xs:enumeration>
+      <xs:enumeration value="2.5"></xs:enumeration>
+      <xs:enumeration value="2.0"></xs:enumeration>
+      <xs:enumeration value="1.8"></xs:enumeration>
+      <xs:enumeration value="1.5"></xs:enumeration>
+      <xs:enumeration value="1.0"></xs:enumeration>
+      <xs:enumeration value="0.5"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
