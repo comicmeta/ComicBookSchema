@@ -1,25 +1,6 @@
 # Comic Book Schema
 An XML schema for implementing the Comic Book Ontology metadata vocabulary.
 
-## Core Element List
-
-+ publisherName
-+ imprintName
-+ country
-+ seriesTitle
-+ seriesYear
-+ volumeNumber
-+ issueNumber
-+ language
-+ format
-+ edition
-+ printing
-+ variance
-+ condition
-+ grade
-+ certNumber
-
-
 ## References
 Petiya, S. (2014). [*Building a Semantic Web of comics: Publishing Linked Data in HTML/RDFa using a comic book ontology and metadata application profiles*](http://rave.ohiolink.edu/etdc/view?acc_num=kent1416791055). (Electronic Thesis).
 
