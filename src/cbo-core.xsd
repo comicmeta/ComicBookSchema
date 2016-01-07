@@ -47,7 +47,7 @@
       <xs:element ref="cbo:imprintName" minOccurs="0" maxOccurs="1"></xs:element>
       <xs:element ref="cbo:country" minOccurs="1" maxOccurs="1"></xs:element>
       <xs:element ref="cbo:seriesTitle" minOccurs="1" maxOccurs="1"></xs:element>
-      <xs:element ref="cbo:seriesYear" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element ref="cbo:seriesYear" minOccurs="1" maxOccurs="1"></xs:element>
       <xs:element ref="cbo:volumeNumber" minOccurs="0" maxOccurs="1"></xs:element>
       <xs:element ref="cbo:issueNumber" minOccurs="1" maxOccurs="1"></xs:element>
       <xs:element ref="cbo:language" minOccurs="1" maxOccurs="1"></xs:element>
