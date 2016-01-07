@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    NAME          : Comic Book Schema (Core) - Example #01A
+    DESCRIPTION   : Basic XML description of Daredevil #67 using only required core elements.
+    SUMMARY       : The core schema only requires the usage of 6 elements to identify a work. These required elements include 
+                    the publisher name, country, series title, series year, issue number, and language. Volume number is optional.
+                    Note that no format, variance, condition, etc. has been specified. By adding additional properties to a
+                    description we can begin to identify a specific example, or manifestation, of Daredevil #67, such as 
+                    the digital edition or a reprinted copy.
+  -->
+<Comic xmlns="http://comicmeta.org/cbo">
+  <publisherName>Marvel Comics</publisherName>
+  <country>US</country>
+  <seriesTitle>Daredevil</seriesTitle>
+  <seriesYear>1963</seriesYear>
+  <volumeNumber>1</volumeNumber>
+  <issueNumber>67</issueNumber>
+  <language>en</language>
+</Comic>
