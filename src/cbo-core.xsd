@@ -20,14 +20,14 @@
   <xs:element name="certNumber" type="xs:string"></xs:element>
   <xs:element name="country" type="xs:string"></xs:element>
   <xs:element name="imprintName" type="xs:string"></xs:element>
-  <xs:element name="issueNumber" type="xs:string"></xs:element>
+  <xs:element name="issueNumber" type="xs:string" default="1"></xs:element>
   <xs:element name="language" type="xs:string"></xs:element>
   <xs:element name="printing" type="xs:int"></xs:element>
   <xs:element name="publisherName" type="xs:string"></xs:element>
   <xs:element name="seriesTitle" type="xs:string"></xs:element>
   <xs:element name="seriesYear" type="xs:gYear"></xs:element>
   <xs:element name="variance" type="xs:string"></xs:element>
-  <xs:element name="volumeNumber" type="xs:string"></xs:element>
+  <xs:element name="volumeNumber" type="xs:string" default="1"></xs:element>
 
   <!-- // CLASSES //   -->
   <xs:complexType name="Collection">
@@ -47,14 +47,14 @@
       <xs:element ref="cbo:imprintName" minOccurs="0" maxOccurs="1"></xs:element>
       <xs:element ref="cbo:country" minOccurs="1" maxOccurs="1"></xs:element>
       <xs:element ref="cbo:seriesTitle" minOccurs="1" maxOccurs="1"></xs:element>
-      <xs:element ref="cbo:seriesYear" minOccurs="1" maxOccurs="1"></xs:element>
+      <xs:element ref="cbo:seriesYear" minOccurs="0" maxOccurs="1"></xs:element>
       <xs:element ref="cbo:volumeNumber" minOccurs="1" maxOccurs="1"></xs:element>
       <xs:element ref="cbo:issueNumber" minOccurs="1" maxOccurs="1"></xs:element>
       <xs:element ref="cbo:language" minOccurs="1" maxOccurs="1"></xs:element>
-      <xs:element name="format" type="cbo:Format" minOccurs="0" maxOccurs="1"></xs:element>
-      <xs:element name="edition" type="cbo:Edition" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element name="format" type="cbo:Format" minOccurs="0" maxOccurs="unbounded"></xs:element>
+      <xs:element name="edition" type="cbo:Edition" minOccurs="0" maxOccurs="unbounded"></xs:element>
       <xs:element ref="cbo:printing" minOccurs="0" maxOccurs="1"></xs:element>
-      <xs:element ref="cbo:variance" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element ref="cbo:variance" minOccurs="0" maxOccurs="unbounded"></xs:element>
       <xs:element name="condition" type="cbo:Condition" minOccurs="0" maxOccurs="1"></xs:element>
       <xs:element name="grade" type="cbo:Grade" minOccurs="0" maxOccurs="1"></xs:element>
       <xs:element ref="cbo:certNumber" minOccurs="0" maxOccurs="1"></xs:element>
