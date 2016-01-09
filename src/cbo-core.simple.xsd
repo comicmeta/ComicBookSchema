@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://comicmeta.org/cbo" attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:cbo="http://comicmeta.org/cbo"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+  <!--
+    NAME          : Comic Book Schema (Core), Simple
+    DESCRIPTION   : A simplified version of the Comic Book Schema (Core).
+    SUMMARY       : This simplified version of the core subset is a schema file containing no controlled term lists, and fewer restrictions. 
+                    This version is useful for mapping datasets (Excel, CSV) to Comic Book Schema XML that may contain data which does not
+                    properly validate against the schema.
+    VERSION       : 0.12.0a
+    URL           : http://comicmeta.org/cbo
+    AUTHOR        : Sean Petiya
+    LICENSE       : MIT
+  -->
+
+  <!-- // WRAPPER -->
+  <xs:element name="Collection" type="cbo:Collection"></xs:element>
+
+  <!-- // ELEMENTS //      -->
+  <xs:element name="Comic" type="cbo:Comic"></xs:element>
+  <xs:element name="Collector" type="cbo:Collector"></xs:element>
+
+  <!-- // PROPERTIES //   -->
+  <xs:element name="certNumber" type="xs:string"></xs:element>
+  <xs:element name="condition" type="xs:string"></xs:element>
+  <xs:element name="country" type="xs:string"></xs:element>
+  <xs:element name="edition" type="xs:string"></xs:element>
+  <xs:element name="format" type="xs:string"></xs:element>
+  <xs:element name="grade" type="xs:string"></xs:element>
+  <xs:element name="imprintName" type="xs:string"></xs:element>
+  <xs:element name="issueNumber" type="xs:string"></xs:element>
+  <xs:element name="language" type="xs:string"></xs:element>
+  <xs:element name="printing" type="xs:int"></xs:element>
+  <xs:element name="publisherName" type="xs:string"></xs:element>
+  <xs:element name="seriesTitle" type="xs:string"></xs:element>
+  <xs:element name="seriesYear" type="xs:gYear"></xs:element>
+  <xs:element name="variance" type="xs:string"></xs:element>
+  <xs:element name="volumeNumber" type="xs:string"></xs:element>
+
+  <!-- // CLASSES //   -->
+  <xs:complexType name="Collection">
+    <xs:sequence>
+      <xs:element ref="cbo:Collector"></xs:element>
+      <xs:element ref="cbo:Comic"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Collector">
+    <xs:attribute name="name" type="xs:string"></xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="Comic">
+    <xs:sequence>
+      <xs:element ref="cbo:publisherName"></xs:element>
+      <xs:element ref="cbo:imprintName"></xs:element>
+      <xs:element ref="cbo:country"></xs:element>
+      <xs:element ref="cbo:seriesTitle"></xs:element>
+      <xs:element ref="cbo:seriesYear"></xs:element>
+      <xs:element ref="cbo:volumeNumber"></xs:element>
+      <xs:element ref="cbo:issueNumber"></xs:element>
+      <xs:element ref="cbo:language"></xs:element>
+      <xs:element ref="cbo:format"></xs:element>
+      <xs:element ref="cbo:edition"></xs:element>
+      <xs:element ref="cbo:printing"></xs:element>
+      <xs:element ref="cbo:variance"></xs:element>
+      <xs:element ref="cbo:condition"></xs:element>
+      <xs:element ref="cbo:grade"></xs:element>
+      <xs:element ref="cbo:certNumber"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+</xs:schema>
