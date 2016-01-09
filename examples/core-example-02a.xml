@@ -2,11 +2,11 @@
 <!--
     NAME          : Comic Book Schema (Core) - Example #02A
     DESCRIPTION   : Detailed XML record for a specific manifestation of Daredevil #67
-    SUMMARY       : The creative work that represents Daredevil #67, i.e. the story, artwork, etc. can be embodied in multiple formats. It can be
-                    downloaded as a digital comic, reprinted in a collection of similar works, or reproduced long after the original publication date.
-                    In order to describe a specific manifestation, or example, of Daredevil #67 we need to add additional descriptive elements
-                    to our record. By further detailing which version of Daredevil #67 we are describing, we move closer to identifying
-                    a specific, tangible copy of Daredevil #67.
+    SUMMARY       : The creative work that represents Daredevil #67, i.e. the story, artwork, etc. can be embodied in multiple formats. 
+                    It can be downloaded as a digital comic, reprinted in a collection of similar works, or reproduced long after the 
+                    original publication date. In order to describe a specific manifestation, or example, of Daredevil #67 we need to 
+                    add additional descriptive elements to our record. By further detailing which version of Daredevil #67 we are 
+                    describing, we move closer to identifying a specific, tangible copy of Daredevil #67.
                     
                     Note in the example below we are using qualified XML elements, prefixed with "cbo", and we have repreated the
                     <format> element in order specify that this record describes a color comic book. If we were to change this value

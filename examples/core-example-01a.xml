@@ -3,7 +3,7 @@
     NAME          : Comic Book Schema (Core) - Example #01A
     DESCRIPTION   : Basic XML record for Daredevil #67 using only required core elements.
     SUMMARY       : The core schema only requires the usage of 6 elements to identify a work. These required elements include 
-                    the publisher name, country, series title, series year, volume number, issue number, and language.
+                    the publisher name, country, series title, volume number, issue number, and language.
                     Note that no format, variance, condition, etc. has been specified. By adding additional properties to a
                     description we can begin to identify a specific example, or manifestation, of Daredevil #67, such as 
                     the digital edition or a reprinted copy.
