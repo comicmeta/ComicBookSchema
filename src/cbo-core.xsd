@@ -7,8 +7,9 @@
   <!--
     NAME          : Comic Book Schema (Core)
     DESCRIPTION   : A minimal XML schema containing a subset of core terms from the Comic Book Ontology (CBO) metadata vocabulary.
-    VERSION       : 0.11.1
+    VERSION       : 0.12.0a
     URL           : http://comicmeta.org/cbo
+    AUTHOR        : Sean Petiya
     LICENSE       : MIT
   -->
 
@@ -46,8 +47,8 @@
 
   <xs:complexType name="Comic">
     <xs:sequence>
-      <xs:element ref="cbo:publisherName" minOccurs="1" maxOccurs="1"></xs:element>
-      <xs:element ref="cbo:imprintName" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element ref="cbo:publisherName" minOccurs="1" maxOccurs="unbounded"></xs:element>
+      <xs:element ref="cbo:imprintName" minOccurs="0" maxOccurs="unbounded"></xs:element>
       <xs:element ref="cbo:country" minOccurs="1" maxOccurs="1"></xs:element>
       <xs:element ref="cbo:seriesTitle" minOccurs="1" maxOccurs="1"></xs:element>
       <xs:element ref="cbo:seriesYear" minOccurs="0" maxOccurs="1"></xs:element>
