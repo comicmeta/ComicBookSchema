@@ -6,7 +6,10 @@
 
   <!--
     NAME          : Comic Book Schema (Core)
-    DESCRIPTION   : A minimal XML schema for implementing core terms from the Comic Book Ontology metadata vocabulary.
+    DESCRIPTION   : A minimal XML schema containing a subset of core terms from the Comic Book Ontology (CBO) metadata vocabulary.
+    VERSION       : 0.11.1
+    URL           : http://comicmeta.org/cbo
+    LICENSE       : MIT
   -->
 
   <!-- // WRAPPER -->
