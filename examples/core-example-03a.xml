@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    NAME          : Comic Book Schema (Core) - Example #02A
+    DESCRIPTION   : Detailed XML record for a specific copy of Daredevil #67 in a collection.
+    SUMMARY       : Using additional item level properties, we can identify a specific copy of Daredevil #67.
+                    The example below describes a Very Good- (VG-), CGC 3.5 graded copy of Daredevil #67 with a certification
+                    number of 0198524001. Using these properties we can describe the physical condition of our item,
+                    the grade, and even the certification number. If the item belongs to a specific collection, we can
+                    use the <Collection> and <Collector> elements to describe the collection and its owner.
+  -->
+<cbo:Collection xmlns:cbo="http://comicmeta.org/cbo">
+  <cbo:Collector>Sean Petiya</cbo:Collector>
+  <cbo:Comic>
+    <cbo:publisherName>Marvel Comics</cbo:publisherName>
+    <cbo:country>US</cbo:country>
+    <cbo:seriesTitle>Daredevil</cbo:seriesTitle>
+    <cbo:seriesYear>1963</cbo:seriesYear>
+    <cbo:volumeNumber>1</cbo:volumeNumber>
+    <cbo:issueNumber>67</cbo:issueNumber>
+    <cbo:language>en</cbo:language>
+    <cbo:format>Color</cbo:format>
+    <cbo:format>ComicBook</cbo:format>
+    <cbo:edition>Newsstand</cbo:edition>
+    <cbo:printing>1</cbo:printing>
+    <cbo:condition>VG-</cbo:condition>
+    <cbo:grade>3.5</cbo:grade>
+    <cbo:certNumber>0198524001</cbo:certNumber>
+  </cbo:Comic>
+</cbo:Collection>
