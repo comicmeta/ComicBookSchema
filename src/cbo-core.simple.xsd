@@ -21,7 +21,7 @@
 
   <!-- // ELEMENTS //      -->
   <xs:element name="Comic" type="cbo:Comic"></xs:element>
-  <xs:element name="Collector" type="cbo:Collector"></xs:element>
+  <xs:element name="Collector" type="xs:string"></xs:element>
 
   <!-- // PROPERTIES //   -->
   <xs:element name="certNumber" type="xs:string"></xs:element>
@@ -46,10 +46,6 @@
       <xs:element ref="cbo:Collector"></xs:element>
       <xs:element ref="cbo:Comic"></xs:element>
     </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="Collector">
-    <xs:attribute name="name" type="xs:string"></xs:attribute>
   </xs:complexType>
 
   <xs:complexType name="Comic">
