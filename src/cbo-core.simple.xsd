@@ -8,9 +8,9 @@
     NAME          : Comic Book Schema (Core), Simple
     DESCRIPTION   : A simplified version of the Comic Book Schema (Core).
     SUMMARY       : This simplified version of the core subset is a schema file containing no controlled term lists, and fewer restrictions. 
-                    This version is useful for mapping datasets (Excel, CSV) to Comic Book Schema XML that may contain data which does not
-                    properly validate against the schema.
-    VERSION       : 0.12.0a
+                    This version is useful for mapping datasets (Excel, CSV) to Comic Book Schema XML that may contain data which might not
+                    always validate against the schema.
+    VERSION       : 0.13.1a
     URL           : http://comicmeta.org/cbo
     AUTHOR        : Sean Petiya
     LICENSE       : MIT
@@ -30,6 +30,7 @@
   <xs:element name="edition" type="xs:string"></xs:element>
   <xs:element name="format" type="xs:string"></xs:element>
   <xs:element name="grade" type="xs:string"></xs:element>
+  <xs:element name="guaranteedBy" type="xs:string"></xs:element>
   <xs:element name="imprintName" type="xs:string"></xs:element>
   <xs:element name="issueNumber" type="xs:string"></xs:element>
   <xs:element name="language" type="xs:string"></xs:element>
@@ -64,6 +65,7 @@
       <xs:element ref="cbo:variance"></xs:element>
       <xs:element ref="cbo:condition"></xs:element>
       <xs:element ref="cbo:grade"></xs:element>
+      <xs:element ref="cbo:guaranteedBy"></xs:element>      
       <xs:element ref="cbo:certNumber"></xs:element>
     </xs:sequence>
   </xs:complexType>
