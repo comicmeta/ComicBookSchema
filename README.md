@@ -17,6 +17,7 @@ An XML schema for implementing the Comic Book Ontology metadata vocabulary.
 + variance
 + condition
 + grade
++ guaranteedBy
 + certNumber
 
 
