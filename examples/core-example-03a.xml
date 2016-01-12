@@ -2,8 +2,8 @@
 <!--
     NAME          : Comic Book Schema (Core) - Example #02A
     DESCRIPTION   : Detailed XML record for a specific copy of Daredevil #67 in a collection.
-    SUMMARY       : Using additional item level properties, we can identify a specific copy of Daredevil #67.
-                    The example below describes a Very Good- (VG-), CGC 3.5 graded copy of Daredevil #67 with a certification
+    SUMMARY       : Using additional item level properties, we can describe a specific copy of Daredevil #67.
+                    The example below identifies a Very Good- (VG-), CGC 3.5 graded copy of Daredevil #67 with a certification
                     number of 0198524001. Using these properties we can describe the physical condition of our item,
                     the grade, and even the certification number. If the item belongs to a specific collection, we can
                     use the <Collection> and <Collector> elements to describe the collection and its owner.
