@@ -8,7 +8,7 @@
                     add additional descriptive elements to our record. By further detailing which version of Daredevil #67 we are 
                     describing, we move closer to identifying a specific, tangible copy of Daredevil #67.
                     
-                    Note in the example below we are using qualified XML elements, prefixed with "cbo", and we have repreated the
+                    Note in the example below we are using qualified XML elements, prefixed with "cbo", and we have repeated the
                     <format> element in order specify that this record describes a color comic book. If we were to change this value
                     to digital comic, we would be describing a different manifestation of Daredevil #67.
   -->
