@@ -1,4 +1,6 @@
 # Comic Book Schema
+
+[![Join the chat at https://gitter.im/comicmeta/ComicBookSchema](https://badges.gitter.im/comicmeta/ComicBookSchema.svg)](https://gitter.im/comicmeta/ComicBookSchema?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 An XML schema for implementing the Comic Book Ontology metadata vocabulary.
 
 ## Core Element List
